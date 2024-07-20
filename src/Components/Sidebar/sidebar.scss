@@ -5,12 +5,13 @@
     justify-content: center;
     background-color: white;
     color: black;
+    z-index: 999;
     
 
     .bg{
         position: fixed;
         top: 0;
-        right: 0;
+        left: 0;
         bottom: 0;
         width: 400px;
         background: white;
@@ -21,6 +22,8 @@
             height: 100%;
             display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
             gap: 20px;
 
             a{
@@ -35,7 +38,7 @@
         border-radius: 50%;
         position: fixed;
         top: 25px;
-        right: 25px;
+        left: 25px;
         background-color: transparent;
         border: none;
         cursor: pointer;
