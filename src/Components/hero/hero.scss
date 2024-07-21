@@ -11,6 +11,12 @@
     height: 100%;
     margin: auto;
 
+    @include mobile{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     .textContainer {
       width: 50%;
       height: 100%;
@@ -54,12 +60,11 @@
         }
       }
 
-      img {
-        width: 50px;
-      }
+        img {
+          width: 50px;
+        }
     }
   }
-
 
   .verticalContainer{
     position: absolute;

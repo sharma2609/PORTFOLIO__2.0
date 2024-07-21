@@ -62,21 +62,21 @@ const Skills = () => {
     const updatePositions = () => {
       if (window.innerWidth < 768) {
         setPositions({
-          HTML: { x: "0vw", y: "-4vw" },
-          CSS: { x: "-8vw", y: "3vw" },
-          Javascript: { x: "8vw", y: "3vw" },
-          Python: { x: "-12vw", y: "-5vw" },
-          SQL: { x: "12vw", y: "-5vw" },
-          React: { x: "0vw", y: "7vw" },
-          Node: { x: "0vw", y: "-10vw" },
-          Express: { x: "-14vw", y: "7vw" },
-          Bootstrap: { x: "15vw", y: "7vw" },
-          Tailwind: { x: "0vw", y: "12vw" },
+          HTML: { x: "25vw", y: "-44vw" },
+          CSS: { x: "-26vw", y: "-39vw" },
+          Javascript: { x: "0vw", y: "-86vw" },
+          Python: { x: "-10vw", y: "-62vw" },
+          SQL: { x: "25vw", y: "38vw" },
+          React: { x: "8vw", y: "16vw" },
+          Node: { x: "-6vw", y: "-18vw" },
+          Express: { x: "-14vw", y: "29vw" },
+          Bootstrap: { x: "-12vw", y: "60vw" },
+          Tailwind: { x: "-36vw", y: "46vw" },
           SCSS: { x: "-20vw", y: "-8vw" },
-          Git: { x: "24vw", y: "-5vw" },
-          Github: { x: "22vw", y: "12vw" },
-          OOPS: { x: "18vw", y: "-14vw" },
-          FramerMotion: { x: "-26vw", y: "1vw" },
+          Git: { x: "42vw", y: "0vw" },
+          Github: { x: "-2vw", y: "-43vw" },
+          OOPS: { x: "-42vw", y: "0vw" },
+          FramerMotion: { x: "0vw", y: "86vw" },
         });
       } else {
         setPositions({
