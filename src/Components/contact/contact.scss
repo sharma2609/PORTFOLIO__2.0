@@ -1,5 +1,11 @@
 @import "../../app.scss";
 
+.backGround{
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, #202020, #000000);
+}
+
 .contact {
   height: 100%;
   max-width: 1366px;
@@ -7,6 +13,7 @@
   display: flex;
   align-items: center;
   gap: 50px;
+
 
   @include mobile {
     width: 100%;
@@ -52,7 +59,7 @@
 
 
     .phoneSvg {
-      stroke: orange;
+      stroke: #3dccc7;
       position: absolute;
       margin: auto;
       z-index: -1;
@@ -79,7 +86,7 @@
       button {
         padding: 20px;
         border: none;
-        background-color: orange;
+        background-color: #3dccc7;
         cursor: pointer;
         font-weight: 500;
         @include mobile {

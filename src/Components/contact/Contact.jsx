@@ -50,6 +50,7 @@ const Contact = () => {
   };
 
   return (
+    <div className="backGround">
     <motion.div
       ref={ref}
       className="contact"
@@ -118,6 +119,7 @@ const Contact = () => {
         </motion.form>
       </div>
     </motion.div>
+    </div>
   );
 };
 

@@ -2,6 +2,7 @@
 
 .portfolio {
   position: relative;
+  background: linear-gradient(180deg, #202020, #000000);
 
   .progress {
     position: sticky;
@@ -9,7 +10,7 @@
     left: 0;
     padding-top: 50px;
     text-align: center;
-    color: orange;
+    color: #3dccc7;
     font-size: 36px;
 
     @include mobile {
@@ -95,7 +96,7 @@
         }
 
         button {
-          background-color: orange;
+          background-color: #3dccc7;
           border: none;
           border-radius: 10px;
           padding: 10px;
