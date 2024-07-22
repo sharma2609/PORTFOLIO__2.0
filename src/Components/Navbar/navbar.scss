@@ -19,6 +19,7 @@
 
     span{
         font-weight: bold;
+        font-size: 20px;
 
         @include mobile{
             display: none;
@@ -28,11 +29,6 @@
     .social{
         display: flex;
         gap: 20px;
-
-        img{
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-        }
+        font-size: 32px;
     }
 }

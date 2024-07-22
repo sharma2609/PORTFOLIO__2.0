@@ -1,67 +1,51 @@
-@import "../../app.scss";
-
-body {
-  background: linear-gradient(180deg, #111132, #0c0c1d);
+@keyframes autoRun {
+  from {
+    transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+  }
 }
 
-.skills-container {
+.banner {
+  background: linear-gradient(180deg, #404040, #000000);
   width: 100%;
   height: 100vh;
+  text-align: center;
+  overflow: hidden;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: repeating-radial-gradient(#ffffff, #111132 10px, #0c0c1d 120px);
 
-  @include mobile {
-    background: repeating-radial-gradient(#ffffff, #111132 5px, #0c0c1d 40px);
-  }
-}
+  .slider {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 30s linear infinite;
 
-.skill-main {
-  z-index: 999;
-  font-size: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  font-weight: 600;
-  background-color: #ffffff;
-  color: #000000;
-  padding: 2rem;
-  box-shadow: 0 5px 10px rgb(255, 255, 255, 0.2);
-  cursor: pointer;
+    .item {
+      z-index: 999;
+      font-size: 80px;
+      font-weight: bolder;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 30%;
+      width: 60%;
+      border-radius: 50px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      inset: 0 0 0 0;
+      transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
 
-  @media (max-width: 768px) {
-    font-size: 20px;
-    padding: 1.5rem;
-  }
 
-  @media (max-width: 480px) {
-    font-size: 16px;
-    padding: 1rem;
-  }
-}
-
-.skill {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  font-weight: 600;
-  background-color: #ffffff;
-  color: rebeccapurple;
-  padding: 1rem 1.5rem;
-  box-shadow: 0 4px 6px rgb(255, 255, 255, 0.5);
-  cursor: pointer;
-  position: absolute;
-
-  @media (max-width: 768px) {
-    padding: 0.75rem 1rem;
-  }
-
-  @media (max-width: 480px) {
-    padding: 0.5rem 0.75rem;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+    }
   }
 }

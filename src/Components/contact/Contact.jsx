@@ -2,6 +2,9 @@ import { useRef, useState } from "react";
 import "./contact.scss";
 import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import { CiMail } from "react-icons/ci";
+import { FaAddressBook } from "react-icons/fa";
+import { CiPhone } from "react-icons/ci";
 
 const variants = {
   initial: {
@@ -57,15 +60,15 @@ const Contact = () => {
       <motion.div className="textContainer" variants={variants}>
         <motion.h1 variants={variants}>Let’s work together</motion.h1>
         <motion.div className="item" variants={variants}>
-          <h2>Mail</h2>
+          <h2><CiMail /> Mail</h2>
           <span>priyanshu.sharma.2609p@gmail.com</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h2>Address</h2>
+          <h2><FaAddressBook /> Address</h2>
           <span>Meerut, Uttar Pradesh, India</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h2>Phone</h2>
+          <h2><CiPhone /> Phone</h2>
           <span>+91 9149223115</span>
         </motion.div>
       </motion.div>

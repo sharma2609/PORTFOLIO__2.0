@@ -27,7 +27,7 @@ const textVariants = {
 const sliderVariants = {
   initial: {
     x: 0,
-    opacity: 0.4
+    opacity: 0.8
   },
   animate: {
     x: "-450%",
