@@ -16,9 +16,6 @@
   text-align: center;
   overflow: hidden;
   position: relative;
-  
-
-  
 
   .slider {
     position: absolute;
@@ -30,12 +27,13 @@
     transform: perspective(1000px);
     animation: autoRun 30s linear infinite;
 
-    .slidertext{
-      // background-color: white;
+    .slidertext {
+      // background-color: white; // If needed, uncomment this line
       height: 50%;
       width: 60%;
       font-size: 100px;
       font-weight: bolder;
+      // Add additional styling if necessary
     }
 
     .item {
@@ -56,9 +54,8 @@
     }
   }
 
-  
   .text {
-    text-decoration: underline dashed;
+    // text-decoration: underline dashed;
     font-size: clamp(2rem, 5vw, 5rem);
     color: white;
     padding: 0 clamp(1rem, 2vw, 3rem);
@@ -67,16 +64,26 @@
     display: inline-block;
     white-space: nowrap; // Prevent text from wrapping to the next line
     position: absolute;
-    top: 80%;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background: rgba(264, 264, 264, 0.1); // Background box effect
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); // Shadow effect
+    padding: 0.5rem 1rem; // Padding around text
 
     @include mobile {
+      height: 420px;
       top: 75%; // Adjust top position
-      // font-size: clamp(1.5rem, 4vw, 3rem); // Scale font size
       font-size: 48px;
       padding: 0 clamp(0.5rem, 1vw, 2rem); // Scale padding
       white-space: normal; // Allow text wrapping on smaller screens
+      width: 100%; // Full width to allow wrapping
+      text-align: center; // Center text
+      line-height: 1.2; // Adjust line height for better spacing
+      display: flex; // Use flexbox for alignment
+      flex-direction: column; // Stack text vertically
+      align-items: center; // Center text horizontally
+      justify-content: center; // Center text vertically
     }
   }
 }

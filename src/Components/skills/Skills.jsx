@@ -77,7 +77,7 @@ const Skills = () => {
   return (
     <div className='banner'>
       <div className='slider' style={{ '--quantity': 15 }}>
-      <div className='slidertext'><GoTools /></div>
+      {/* <div className='slidertext'><GoTools /></div> */}
         <div className='item' style={{ '--position': 1 }}><FaHtml5 /></div>
         <div className='item' style={{ '--position': 2 }}><MdCss /></div>
         <div className='item' style={{ '--position': 3 }}><IoLogoJavascript /></div>
