@@ -1,23 +1,33 @@
 import "./skills.scss";
-import { FaHtml5 } from "react-icons/fa";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import { FaHtml5, FaPython, FaReact, FaNode, FaBootstrap, FaGithub, FaGitSquare } from "react-icons/fa";
 import { MdCss } from "react-icons/md";
 import { IoLogoJavascript } from "react-icons/io5";
-import { FaPython } from "react-icons/fa";
-import { FaReact } from "react-icons/fa";
-import { FaNode } from "react-icons/fa6";
-import { SiExpress } from "react-icons/si";
-import { FaBootstrap } from "react-icons/fa";
-import { SiMysql } from "react-icons/si";
-import { BsFiletypeSql } from "react-icons/bs";
+import { SiExpress, SiMysql } from "react-icons/si";
+import { BsFiletypeSql, BsFiletypeScss } from "react-icons/bs";
 import { TbBrandFramerMotion } from "react-icons/tb";
-import { BsFiletypeScss } from "react-icons/bs";
-import { FaGithub } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { FaGitSquare } from "react-icons/fa";
 
-
+const textVariants = {
+  initial: {
+    x: 0,
+    opacity: 0.8
+  },
+  animate: {
+    x: "-40%",
+    transition: {
+      repeat: Infinity,
+      repeatType:"mirror",
+      duration: 10,
+    },
+  },
+}
 
 const Skills = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { threshold: 0.1 });
+
   return (
     <div className='banner'>
       <div className='slider' style={{ '--quantity': 15 }}>
@@ -37,6 +47,13 @@ const Skills = () => {
         <div className='item' style={{ '--position': 14 }}><RiTailwindCssFill /></div>
         <div className='item' style={{ '--position': 15 }}><FaGitSquare /></div>
       </div>
+      <motion.div className="text"
+          // ref={ref}
+          variants={textVariants}
+          initial="initial"
+          animate={"animate"}>
+        <motion.h1 className="text" variants={textVariants}>Technical Proficiencies</motion.h1>
+      </motion.div>
     </div>
   );
 }

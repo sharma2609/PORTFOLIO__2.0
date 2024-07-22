@@ -50,14 +50,18 @@
       transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
 
 
-      img{
-        width: 100%;
-        height: 100%;
-        object-fit: fill;
-    }
     }
   }
+
+  .text{
+    position: relative;
+    top: 75%;
+    right: -20%;
+    font-size: 64px;
+  }
 }
+
+
 
 
 @include mobile {
