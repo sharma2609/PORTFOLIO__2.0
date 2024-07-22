@@ -70,6 +70,7 @@
         display: flex;
         flex-direction: column;
         gap: 30px;
+        z-index: 1; /* Ensure text container is on top */
 
         @include mobile {
           transform: none !important;
@@ -102,6 +103,15 @@
           padding: 10px;
           width: 200px;
           cursor: pointer;
+          z-index: 2; /* Ensure button is on top */
+          pointer-events: auto; /* Ensure button can be clicked */
+
+          @include mobile {
+            width: 100%;
+            max-width: 200px;
+            padding: 15px;
+            font-size: 18px;
+          }
         }
       }
     }
