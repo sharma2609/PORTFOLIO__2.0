@@ -40,7 +40,7 @@
       }
 
       h1 {
-        font-size: 80px;
+        font-size: 68px;
 
         @include mobile {
           font-size: 36px;
@@ -69,6 +69,7 @@
   .verticalContainer{
     position: absolute;
     font-size: 50vh;
+    // top: 0;
     right: -200px;
     white-space: nowrap;
     width: 50%;

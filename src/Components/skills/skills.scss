@@ -1,6 +1,5 @@
 @import "../../app.scss";
 
-
 @keyframes autoRun {
   from {
     transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
@@ -17,11 +16,11 @@
   text-align: center;
   overflow: hidden;
   position: relative;
+  
 
   
 
   .slider {
-
     position: absolute;
     width: 200px;
     height: 250px;
@@ -31,7 +30,13 @@
     transform: perspective(1000px);
     animation: autoRun 30s linear infinite;
 
-
+    .slidertext{
+      // background-color: white;
+      height: 50%;
+      width: 60%;
+      font-size: 100px;
+      font-weight: bolder;
+    }
 
     .item {
       background: transparent;
@@ -41,42 +46,51 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 30%;
+      height: 50%;
       width: 60%;
       border-radius: 50px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       position: absolute;
       inset: 0 0 0 0;
       transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
-
-
     }
   }
 
-  .text{
-    position: relative;
-    top: 75%;
-    right: -20%;
-    font-size: 64px;
+  
+  .text {
+    text-decoration: underline dashed;
+    font-size: clamp(2rem, 5vw, 5rem);
+    color: white;
+    padding: 0 clamp(1rem, 2vw, 3rem);
+    border-radius: clamp(0.4rem, 0.75vw, 1rem);
+    transition: background-color 400ms, color 400ms;
+    display: inline-block;
+    white-space: nowrap; // Prevent text from wrapping to the next line
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include mobile {
+      top: 75%; // Adjust top position
+      // font-size: clamp(1.5rem, 4vw, 3rem); // Scale font size
+      font-size: 48px;
+      padding: 0 clamp(0.5rem, 1vw, 2rem); // Scale padding
+      white-space: normal; // Allow text wrapping on smaller screens
+    }
   }
 }
 
-
-
-
 @include mobile {
-
   .banner {
-    
-    .slider{
+    .slider {
       width: 160px;
       height: 200px;
       left: calc(50% - 80px);
 
-      .item{
-        transform: 
-          rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-          translateZ(420px);
+      .item {
+        font-size: 150px;
+        transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(420px);
       }
     }
   }

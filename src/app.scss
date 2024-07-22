@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Montserrat:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+
+
+
+
 html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
@@ -7,7 +14,24 @@ html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "DM Sans", sans-serif;
+  // font-family: "DM Sans", sans-serif;
+
+  // font-family: "Montserrat", sans-serif;
+  // font-optical-sizing: auto;
+  // font-weight: 400;
+  // font-style: normal;
+
+
+  // font-family: "Edu AU VIC WA NT Hand", cursive;
+  // font-optical-sizing: auto;
+  // font-weight: 400;
+  // font-style: normal;
+
+    font-family: "Merienda", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  
 }
 
 body {
