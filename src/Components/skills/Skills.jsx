@@ -44,7 +44,7 @@ const Skills = () => {
 
             if (iteration >= target.dataset.value.length) {
               clearInterval(interval);
-              target.style.color = '#3dccc7'; // Change text color after effect ends
+              target.style.color = '#909090'; // Change text color after effect ends
             }
 
             iteration += 1 / 3;
