@@ -1,6 +1,7 @@
 @import "../../app.scss";
 
 .hero {
+  z-index: 0;
   height: calc(100vh - 100px);
   overflow: hidden;
   background: linear-gradient(180deg, #202020, #000000);
@@ -11,7 +12,7 @@
     height: 100%;
     margin: auto;
 
-    @include mobile{
+    @include mobile {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -48,6 +49,7 @@
       }
 
       .buttons {
+        z-index: 999;
         button {
           padding: 20px;
           border: 1px solid white;
@@ -60,35 +62,34 @@
         }
       }
 
-        img {
-          width: 50px;
-        }
+      img {
+        width: 50px;
+      }
     }
   }
 
-  .verticalContainer{
+  .verticalContainer {
     position: absolute;
     font-size: 50vh;
-    // top: 0;
     right: -200px;
     white-space: nowrap;
     width: 50%;
     font-weight: bold;
     color: #3dccc7;
 
-        p{
-            writing-mode: vertical-rl;
-            text-orientation: upright;
-        }
+    p {
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+    }
 
-        @include mobile{
-            position: absolute;
-            top: 50%;
-            left: 0%;
-            transform: translate(-50%, -50%);
-            text-align: center;
+    @include mobile {
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      transform: translate(-50%, -50%);
+      text-align: center;
     }
-    }
+  }
 
   .slidingTextContainer {
     position: absolute;

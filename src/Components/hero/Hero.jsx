@@ -1,6 +1,7 @@
 import "./hero.scss";
 import { motion } from "framer-motion";
-import scrollIconImg from "..//..//assets//scroll.png"
+import scrollIconImg from "..//..//assets//scroll.png";
+import CV from "..//..//assets//CV.pdf";
 
 const textVariants = {
   initial: {
@@ -24,35 +25,36 @@ const textVariants = {
     },
   },
 };
+
 const sliderVariants = {
   initial: {
     x: 0,
-    opacity: 0.8
+    opacity: 0.8,
   },
   animate: {
     x: "-450%",
     transition: {
       repeat: Infinity,
-      repeatType:"mirror",
+      repeatType: "mirror",
       duration: 20,
     },
   },
 };
 
 const verticalSliderVariants = {
-    initial: {
-        y: 0,
-        opacity: 0.4
+  initial: {
+    y: 0,
+    opacity: 0.4,
+  },
+  animate: {
+    y: "-100%",
+    transition: {
+      repeat: Infinity,
+      repeatType: "mirror",
+      duration: 10,
     },
-    animate: {
-        y: "-100%",
-        transition: {
-          repeat: Infinity,
-          repeatType:"mirror",
-          duration: 10,
-        },
-    },
-}
+  },
+};
 
 const Hero = () => {
   return (
@@ -68,12 +70,16 @@ const Hero = () => {
           <motion.h1 variants={textVariants}>
             Web Developer and Python Programmer
           </motion.h1>
-          <motion.div variants={textVariants} className="buttons">
-            <motion.button variants={textVariants}>
-              Resume
-            </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
-          </motion.div>
+          <div className="buttons">
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <a href={CV} download>
+                    Resume
+                </a>
+              </motion.button>
+          </div>
           <motion.img
             variants={textVariants}
             animate="scrollButton"
@@ -90,10 +96,12 @@ const Hero = () => {
       >
         Front End + Back End + Python
       </motion.div>
-
-      <motion.div className="verticalContainer" variants={verticalSliderVariants}
+      <motion.div
+        className="verticalContainer"
+        variants={verticalSliderVariants}
         initial="initial"
-        animate="animate">
+        animate="animate"
+      >
         <p>WELCOME</p>
       </motion.div>
     </div>

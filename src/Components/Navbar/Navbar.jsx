@@ -1,10 +1,6 @@
 import Sidebar from "../Sidebar/Sidebar"
 import "./navbar.scss"
 import { motion } from "framer-motion"
-import bentoIcon from "..//..//assets//bento.png"
-import instaIcon from "..//..//assets//instagram.png"
-import githubIcon from "..//..//assets//github.png"
-import linkedinIcon from "..//../assets//linkedin.webp"
 import { SiBento } from "react-icons/si";
 import { FaInstagram } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
